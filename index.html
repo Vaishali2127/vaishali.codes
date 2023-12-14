@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vaishali | Frontend Developer</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/favicon.ico" />
+
+    <!-- Fonts and Stylesheets -->
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/styles.css" />
+
+    <!-- Tailwind CSS Script with Plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="/tailwind.config.js"></script>
+    <script>
+      tailwind.config = twConfig; // Initialize Tailwind CSS Configuration
+    </script>
+  </head>
+  <body class="bg-slate-950">
+    <main class="w-full h-screen relative overflow-hidden">
+      <!-- Navigation Bar -->
+      <nav
+        class="sticky top-3 mx-auto font-medium flex my-8 text-slate-100 items-center bg-gray-800/20 backdrop-blur-md z-50 h-fit py-1 rounded-full w-fit border px-1 text-center border-slate-700"
+      >
+        <a
+          class="rounded-full bg-slate-200 text-slate-950 py-1.5 px-4 sm:px-6"
+          href="/"
+          >Home</a
+        >
+        <a class="px-4 sm:px-6" href="/projects.html">Projects</a>
+        <a class="px-4 sm:px-6" href="/about.html">About</a>
+        <a class="px-4 sm:px-6" href="/contact.html">Contact</a>
+      </nav>
+
+      <!-- Background Image -->
+      <img
+        src="/assets/lines.webp"
+        class="absolute top-20 w-screen h-full object-contain"
+      />
+
+      <!-- Main Container -->
+      <div class="container mx-auto h-full">
+        <!-- Gradient Overlay -->
+        <div
+          class="gradient-div absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/4 w-full md:max-w-[780px] md:max-h-[390px] h-1/2 blur-[150px] rounded-full"
+        ></div>
+
+        <!-- Hero Section -->
+        <section
+          class="relative h-full px-4 flex items-center flex-col justify-between"
+        >
+          <div
+            class="flex-1 mt-16 flex flex-col items-center justify-center text-center"
+          >
+            <!-- Hero Headings -->
+            <h1
+              class="text-slate-100 text-4xl sm:text-6xl md:text-7xl font-bold"
+            >
+              An Amazing
+            </h1>
+            <h2
+              class="text-gradient text-slate-100 text-4xl sm:text-6xl md:text-7xl font-bold mt-5"
+            >
+              Frontend Developer
+            </h2>
+            <!-- Hero Description -->
+            <p
+              class="text-slate-100 sm:text-lg max-w-lg text-center mt-8 sm:mt-12"
+            >
+              Hello 👋. My name is Vaishali, and I am a Frontend developer
+              living in India & working remotely with the whole world.
+            </p>
+            <!-- Call to Action Button -->
+            <a
+              href="/contact.html"
+              class="color-gradient hover:-translate-y-1 mt-8 sm:mt-16 font-medium py-3 px-6 rounded-full hover:shadow-2xl transition-all duration-200"
+            >
+              Connect with me here
+            </a>
+          </div>
+
+          <!-- Hero Image -->
+          <img
+            class="w-56 flex-1 object-contain"
+            src="/assets/mem-waving.png"
+          />
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

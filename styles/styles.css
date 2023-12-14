@@ -1,0 +1,67 @@
+.gradient-div {
+  will-change: transform;
+  background-image: linear-gradient(180deg, #00c2ff, #ff29c3, #184bff, #174aff);
+}
+
+.color-gradient {
+  will-change: transform;
+  background-image: radial-gradient(
+      66.11% 66.11% at 50% 33.89%,
+      hsla(0, 0%, 100%, 0.4) 0,
+      hsla(0, 0%, 100%, 0) 100%
+    ),
+    linear-gradient(
+      278.88deg,
+      #fff,
+      #66e3ff 28.83%,
+      #a787ff 56.31%,
+      #ffc875 86.49%
+    );
+}
+
+@layer utilities {
+  .text-gradient {
+    background: radial-gradient(
+        66.11% 66.11% at 50% 33.89%,
+        hsla(0, 0%, 100%, 0.4) 0,
+        hsla(0, 0%, 100%, 0) 100%
+      ),
+      linear-gradient(
+        278.88deg,
+        #fff,
+        #66e3ff 28.83%,
+        #a787ff 56.31%,
+        #ffc875 86.49%
+      );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: 12s ease 0s infinite normal none running move-gradient;
+  }
+
+  .text-gradient-static {
+    background: radial-gradient(
+        66.11% 66.11% at 50% 33.89%,
+        hsla(0, 0%, 100%, 0.4) 0,
+        hsla(0, 0%, 100%, 0) 100%
+      ),
+      linear-gradient(278.88deg, #66e3ff 28.83%, #a787ff 56.31%, #ffc875 86.49%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @keyframes move-gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
