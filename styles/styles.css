@@ -1,0 +1,216 @@
+.gradient-div {
+  will-change: transform;
+  background-image: linear-gradient(180deg, #00c2ff, #ff29c3, #184bff, #174aff);
+}
+
+.color-gradient {
+  will-change: transform;
+  background-image: radial-gradient(
+      66.11% 66.11% at 50% 33.89%,
+      hsla(0, 0%, 100%, 0.4) 0,
+      hsla(0, 0%, 100%, 0) 100%
+    ),
+    linear-gradient(
+      278.88deg,
+      #fff,
+      #66e3ff 28.83%,
+      #a787ff 56.31%,
+      #ffc875 86.49%
+    );
+}
+
+@layer utilities {
+  .text-gradient {
+    background: radial-gradient(
+        66.11% 66.11% at 50% 33.89%,
+        hsla(0, 0%, 100%, 0.4) 0,
+        hsla(0, 0%, 100%, 0) 100%
+      ),
+      linear-gradient(
+        278.88deg,
+        #fff,
+        #66e3ff 28.83%,
+        #a787ff 56.31%,
+        #ffc875 86.49%
+      );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: 12s ease 0s infinite normal none running move-gradient;
+  }
+
+  .text-gradient-static {
+    background: radial-gradient(
+        66.11% 66.11% at 50% 33.89%,
+        hsla(0, 0%, 100%, 0.4) 0,
+        hsla(0, 0%, 100%, 0) 100%
+      ),
+      linear-gradient(278.88deg, #66e3ff 28.83%, #a787ff 56.31%, #ffc875 86.49%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @keyframes move-gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+/* ========== Homepage: Wind slider (featured projects) ========== */
+/* End-to-end full width, exactly 2 cards visible */
+.wind-slider-wrapper {
+  overflow: hidden;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  /* background: linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.15) 50%, rgba(15, 23, 42, 0.4) 100%); */
+  padding: 1.5rem 0 2rem;
+  position: relative;
+}
+
+.wind-slider-wrapper::before,
+.wind-slider-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.wind-slider-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, rgb(2 6 23 / 0.85), transparent);
+}
+
+.wind-slider-wrapper::after {
+  right: 0;
+  left: auto;
+  background: linear-gradient(to left, rgb(2 6 23 / 0.85), transparent);
+}
+
+.wind-slider-wrapper:active {
+  cursor: grabbing;
+}
+
+.wind-slider-track {
+  overflow: hidden;
+  width: 100%;
+}
+
+.wind-slider-inner {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  padding: 0 0.5rem;
+}
+
+/* Exactly 2 cards in view; fixed height so all cards match */
+.wind-card {
+  flex-shrink: 0;
+  width: calc(50vw - 0.75rem);
+  min-width: 280px;
+  max-width: 420px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.25);
+}
+
+.wind-card:hover {
+  box-shadow: 0 12px 40px -8px rgba(56, 189, 248, 0.25);
+}
+
+.wind-card:focus {
+  outline: 2px solid rgba(56, 189, 248, 0.5);
+  outline-offset: 2px;
+}
+
+/* Image area: white bg, fixed height, logo contained and centered (no crop) */
+.wind-card-image {
+  flex-shrink: 0;
+  height: 140px;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 0.75rem;
+}
+
+/* Single logo: centered. Two logos: each gets equal half so neither is cut off */
+.wind-card-image img {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+.wind-card-image img.wind-card-logo-stag {
+  transform: scale(1.25);
+}
+
+@media (max-width: 768px) {
+  .wind-card {
+    height: 400px;
+  }
+}
+
+/* Projects Highlight – sparkle effect */
+.projects-highlight-heading {
+  position: relative;
+}
+
+.sparkle-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5em;
+  height: 1em;
+  margin-left: 0.15em;
+}
+
+.sparkle-dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a5f3fc 0%, #e0f2fe 50%, #fef08a 100%);
+  box-shadow: 0 0 6px rgba(165, 243, 252, 0.8);
+  animation: sparkle-pop 1.8s ease-in-out infinite;
+}
+
+.sparkle-dot-1 { top: 0; left: 50%; margin-left: -2px; animation-delay: 0s; }
+.sparkle-dot-2 { top: 50%; right: 0; margin-top: -2px; animation-delay: 0.2s; }
+.sparkle-dot-3 { bottom: 0; left: 50%; margin-left: -2px; animation-delay: 0.4s; }
+.sparkle-dot-4 { top: 50%; left: 0; margin-top: -2px; animation-delay: 0.6s; }
+.sparkle-dot-5 { top: 25%; left: 35%; animation-delay: 0.3s; }
+
+@keyframes sparkle-pop {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+    box-shadow: 0 0 10px rgba(254, 240, 138, 0.9), 0 0 4px rgba(165, 243, 252, 0.6);
+  }
+}

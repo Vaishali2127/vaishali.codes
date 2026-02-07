@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vaishali | Frontend Developer</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/favicon.ico" />
+
+    <!-- Fonts and Stylesheets -->
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+
+    <!-- Tailwind CSS Script with Plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="/tailwind.config.js"></script>
+    <script>
+      tailwind.config = twConfig; // Initialize Tailwind CSS Configuration
+    </script>
+  </head>
+  <body class="bg-slate-950">
+    <main class="w-full min-h-screen relative overflow-x-hidden">
+      <!-- Navigation Bar -->
+      <nav
+        class="sticky top-3 mx-auto font-medium flex my-8 text-slate-100 items-center bg-gray-800/20 backdrop-blur-md z-50 h-fit py-1 rounded-full w-fit border px-1 text-center border-slate-700"
+      >
+        <a
+          class="rounded-full bg-slate-200 text-slate-950 py-1.5 px-4 sm:px-6"
+          href="/"
+          >Home</a
+        >
+        <a class="px-4 sm:px-6" href="/projects.html">Projects</a>
+        <a class="px-4 sm:px-6" href="/about.html">About</a>
+        <a class="px-4 sm:px-6" href="/contact.html">Contact</a>
+      </nav>
+
+      <!-- Background Image -->
+      <img
+        src="/assets/lines.webp"
+        class="absolute top-20 w-screen h-100 object-contain"
+      />
+
+      <!-- Main Container -->
+      <div class="container mx-auto h-full">
+        <!-- Gradient Overlay -->
+        <div
+          class="gradient-div absolute bottom-1/2 left-1/2 transform -translate-x-1/2 translate-y-1/4 w-full md:max-w-[780px] md:max-h-[390px] h-1/2 blur-[150px] rounded-full"
+        ></div>
+
+        <!-- Hero Section -->
+        <section
+          class="relative min-h-[85vh] px-4 flex items-center flex-col justify-between py-12"
+        >
+          <div
+            class="flex-1 mt-16 flex flex-col items-center justify-center text-center"
+          >
+            <!-- Hero Headings -->
+            <h1
+              class="text-slate-100 text-4xl sm:text-6xl md:text-7xl font-bold"
+            >
+              An Amazing
+            </h1>
+            <h2
+              class="text-gradient text-slate-100 text-4xl sm:text-6xl md:text-7xl font-bold mt-5"
+            >
+              Frontend Developer
+            </h2>
+            <!-- Hero Description -->
+            <p
+              class="text-slate-100 sm:text-lg max-w-lg text-center mt-8 sm:mt-12"
+            >
+              Hello 👋. My name is Vaishali, and I am a Frontend developer
+              living in India & working remotely with the whole world.
+            </p>
+            <!-- Call to Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center gap-3 mt-8 sm:mt-16">
+              <a
+                href="contact.html"
+                class="color-gradient hover:-translate-y-1 font-medium py-3 px-6 rounded-full hover:shadow-2xl transition-all duration-200"
+              >
+                Connect with me here
+              </a>
+              <a
+                href="assets/Vaishali.pdf"
+                download
+                class="inline-flex items-center gap-2 font-medium py-3 px-6 rounded-full border-2 border-slate-500 text-slate-200 hover:border-sky-400 hover:text-white hover:bg-sky-500/10 transition-all duration-200"
+              >
+                <i class="fa-solid fa-download text-sm"></i>
+                Download resume
+              </a>
+            </div>
+          </div>
+          <!-- Hero Image -->
+          <img
+            class="w-56 flex-1 max-h-64 object-contain"
+            src="/assets/mem-waving.png"
+          />
+        </section>
+
+        <!-- Featured Projects – Wind Slider (end-to-end, 2 cards visible) -->
+        <section class="relative pb-12 pt-8 sm:pt-12" id="featured-projects">
+          <div class="container mx-auto px-4 sm:px-6 mb-6">
+            <div class="flex flex-wrap items-end justify-between gap-4">
+              <h2 class="projects-highlight-heading text-slate-400 text-lg sm:text-xl font-medium inline-flex items-center gap-2">
+                Projects Highlight
+                <span class="sparkle-wrap" aria-hidden="true">
+                  <span class="sparkle-dot sparkle-dot-1"></span>
+                  <span class="sparkle-dot sparkle-dot-2"></span>
+                  <span class="sparkle-dot sparkle-dot-3"></span>
+                  <span class="sparkle-dot sparkle-dot-4"></span>
+                  <span class="sparkle-dot sparkle-dot-5"></span>
+                </span>
+              </h2>
+              <a
+                href="projects.html"
+                class="text-gradient-static text-sm sm:text-base font-medium hover:opacity-90 transition-opacity inline-flex items-center gap-2 group"
+              >
+                View all projects
+                <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-0.5 transition-transform"></i>
+              </a>
+            </div>
+          </div>
+          <div class="wind-slider-wrapper relative w-full overflow-hidden" id="wind-slider-wrapper">
+            <div class="wind-slider-track" id="wind-slider-track">
+              <div class="wind-slider-inner">
+                <!-- Card 1: Stag Iconic -->
+                <a href="https://stagiconic.com/" target="_blank" rel="noopener"
+                  class="wind-card group flex-shrink-0 bg-slate-900/90 text-slate-100 backdrop-blur-xl px-0 py-0 rounded-2xl border border-sky-500/40 flex flex-col shadow-xl shadow-sky-900/20 hover:border-sky-400/70 hover:shadow-sky-500/30 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+                  <div class="wind-card-image rounded-t-2xl">
+                    <img src="assets/logos/stag.webp" alt="Stag Iconic – e-commerce website" class="wind-card-img wind-card-logo-stag transition-transform duration-300 group-hover:scale-105" loading="lazy" onerror="this.src='https://picsum.photos/seed/stagiconic/800/450'; this.onerror=null;" />
+                  </div>
+                  <div class="flex flex-col flex-1 px-6 py-5">
+                  <div class="flex justify-between items-center">
+                    <span class="text-gradient-static text-lg text-slate-400 font-medium">Stag Iconic</span>
+                    <span class="inline-flex items-center gap-1.5 text-[8px] font-semibold px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/40 uppercase">
+                      <i class="fa-solid fa-star text-amber-400/90"></i> Featured
+                    </span>
+                  </div>
+                  <p class="text-sm text-slate-300 mt-3 min-h-0 line-clamp-6">
+                    <!-- E-commerce website for a leading sports equipment brand, showcasing products and enabling seamless online purchases. -->
+                    STAG is a leading Indian sports brand delivering high-performance gear for athletes of all levels. Known for durability and quality, it empowers both professionals and aspiring sports enthusiasts.
+                  </p>
+                  <span class="text-sky-400 text-xs font-medium mt-4 mt-auto pt-2 inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Visit site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </span>
+                  </div>
+                </a>
+                <!-- Card 2: Sharp India -->
+                <a href="https://store.sharpappliances.in/" target="_blank" rel="noopener"
+                  class="wind-card group flex-shrink-0 bg-slate-900/90 text-slate-100 backdrop-blur-xl px-0 py-0 rounded-2xl border border-sky-500/40 flex flex-col shadow-xl shadow-sky-900/20 hover:border-sky-400/70 hover:shadow-sky-500/30 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+                  <div class="wind-card-image rounded-t-2xl">
+                    <img src="assets/logos/sharp.png" alt="Sharp India online store" class="wind-card-img transition-transform duration-300 group-hover:scale-105" loading="lazy" onerror="this.src='https://picsum.photos/seed/sharpindia/800/450'; this.onerror=null;" />
+                  </div>
+                  <div class="flex flex-col flex-1 px-6 py-5">
+                  <div class="flex justify-between items-center">
+                    <span class="text-gradient-static text-lg text-slate-400 font-medium">Sharp India</span>
+                    <span class="inline-flex items-center gap-1.5 text-[8px] font-semibold px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/40 uppercase">
+                      <i class="fa-solid fa-star text-amber-400/90"></i> Featured
+                    </span>
+                  </div>
+                  <p class="text-sm text-slate-300 mt-3 min-h-0 line-clamp-6">
+                    <!-- Online store interface for Sharp India, featuring consumer electronics and home appliances. -->
+                    SHARP provides innovative technology solutions that enhance productivity across industries. Its reliable and cutting-edge offerings make it a trusted brand in India's corporate and consumer spaces.
+                  </p>
+                  <span class="text-sky-400 text-xs font-medium mt-4 mt-auto pt-2 inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Visit site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </span>
+                  </div>
+                </a>
+                <!-- Card 3: Fujifilm -->
+                <a href="https://fujifilmhealthcaresolutions.com/" target="_blank" rel="noopener"
+                  class="wind-card group flex-shrink-0 bg-slate-900/90 text-slate-100 backdrop-blur-xl px-0 py-0 rounded-2xl border border-sky-500/40 flex flex-col shadow-xl shadow-sky-900/20 hover:border-sky-400/70 hover:shadow-sky-500/30 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+                  <div class="wind-card-image rounded-t-2xl">
+                    <img src="assets/logos/fujifilm.svg" alt="Fujifilm Medical India website" class="wind-card-img transition-transform duration-300 group-hover:scale-105" loading="lazy" onerror="this.src='https://picsum.photos/seed/fujifilm/800/450'; this.onerror=null;" />
+                  </div>
+                  <div class="flex flex-col flex-1 px-6 py-5">
+                  <div class="flex justify-between items-center">
+                    <span class="text-gradient-static text-lg text-slate-400 font-medium">Fujifilm Medical India</span>
+                    <span class="inline-flex items-center gap-1.5 text-[8px] font-semibold px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/40 uppercase">
+                      <i class="fa-solid fa-star text-amber-400/90"></i> Featured
+                    </span>
+                  </div>
+                  <p class="text-sm text-slate-300 mt-3 min-h-0 line-clamp-6">
+                    <!-- Medical solutions website for Fujifilm India, presenting products, technologies, and resources. -->
+                    FUJIFILM Healthcare Solutions leverages advanced imaging and diagnostic technologies to improve patient care. The brand drives innovation in healthcare, enabling precise and efficient medical solutions.
+                  </p>
+                  <span class="text-sky-400 text-xs font-medium mt-4 mt-auto pt-2 inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Visit site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </span>
+                  </div>
+                </a>
+                <!-- Card 4: Technovate -->
+                <a href="https://technovateforindia.com/" target="_blank" rel="noopener"
+                  class="wind-card group flex-shrink-0 bg-slate-900/90 text-slate-100 backdrop-blur-xl px-0 py-0 rounded-2xl border border-sky-500/40 flex flex-col shadow-xl shadow-sky-900/20 hover:border-sky-400/70 hover:shadow-sky-500/30 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+                  <div class="wind-card-image rounded-t-2xl">
+                    <img src="assets/logos/technovate-logo.jpg" alt="Technovate – Times Of India" class="wind-card-img transition-transform duration-300 group-hover:scale-105" loading="lazy" onerror="this.src='https://picsum.photos/seed/technovate/800/450'; this.onerror=null;" />
+                    <img src="assets/logos/toi.webp" alt="Technovate – Times Of India" class="wind-card-img transition-transform duration-300 group-hover:scale-105" loading="lazy" onerror="this.src='https://picsum.photos/seed/technovate/800/450'; this.onerror=null;" />
+                  </div>
+                  <div class="flex flex-col flex-1 px-6 py-5">
+                  <div class="flex justify-between items-center">
+                    <span class="text-gradient-static text-lg text-slate-400 font-medium">Technovate – TOI</span>
+                    <span class="inline-flex items-center gap-1.5 text-[8px] font-semibold px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/40 uppercase">
+                      <i class="fa-solid fa-star text-amber-400/90"></i> Featured
+                    </span>
+                  </div>
+                  <p class="text-sm text-slate-300 mt-3 min-h-0 line-clamp-6">
+                    <!-- Event website for Technovate, an initiative by Times Of India to showcase innovation and technology. -->
+                    A Times of India and Talrop initiative, Technovate for India fosters innovation and tech skills across all 28 states and UTs. The program uses ideathons, expert sessions, and conclaves to equip students for an AI-driven job market.
+                  </p>
+                  <span class="text-sky-400 text-xs font-medium mt-4 mt-auto pt-2 inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Visit site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </span>
+                  </div>
+                </a>
+                <!-- Card 5: Future Is She -->
+                <a href="https://timestream.in/future-is-she/" target="_blank" rel="noopener"
+                  class="wind-card group flex-shrink-0 bg-slate-900/90 text-slate-100 backdrop-blur-xl px-0 py-0 rounded-2xl border border-sky-500/40 flex flex-col shadow-xl shadow-sky-900/20 hover:border-sky-400/70 hover:shadow-sky-500/30 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+                  <div class="wind-card-image rounded-t-2xl">
+                    <img src="assets/logos/timestream.png" alt="Future Is She – Timestream" class="wind-card-img transition-transform duration-300 group-hover:scale-105" loading="lazy" onerror="this.src='https://picsum.photos/seed/futureisshe/800/450'; this.onerror=null;" />
+                    <img src="assets/logos/toi.webp" alt="Times of India" class="wind-card-img transition-transform duration-300 group-hover:scale-105" loading="lazy" onerror="this.src='https://picsum.photos/seed/futureisshe/800/450'; this.onerror=null;" />
+                  </div>
+                  <div class="flex flex-col flex-1 px-6 py-5">
+                  <div class="flex justify-between items-center">
+                    <span class="text-gradient-static text-lg text-slate-400 font-medium">Future Is She</span>
+                    <span class="inline-flex items-center gap-1.5 text-[8px] font-semibold px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/40 uppercase">
+                      <i class="fa-solid fa-star text-amber-400/90"></i> Featured
+                    </span>
+                  </div>
+                  <p class="text-sm text-slate-300 mt-3 min-h-0 line-clamp-6">
+                    <!-- Campaign microsite celebrating women-led innovation, built for flexible content management. -->
+                    The Future Is SHE – Season 4 is a Times of India initiative celebrating women leaders creating impact across sectors. The series features inspiring online sessions focused on mentorship and empowerment.
+                  </p>
+                  <span class="text-sky-400 text-xs font-medium mt-4 mt-auto pt-2 inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Visit site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </span>
+                  </div>
+                </a>
+                <!-- Card 4: Sharp India -->
+                <a href="https://store.sharpappliances.in/" target="_blank" rel="noopener"
+                  class="wind-card group flex-shrink-0 bg-slate-900/90 text-slate-100 backdrop-blur-xl px-0 py-0 rounded-2xl border border-sky-500/40 flex flex-col shadow-xl shadow-sky-900/20 hover:border-sky-400/70 hover:shadow-sky-500/30 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+                  <div class="wind-card-image rounded-t-2xl">
+                    <img src="assets/logos/sharp.png" alt="Sharp India online store" class="wind-card-img transition-transform duration-300 group-hover:scale-105" loading="lazy" onerror="this.src='https://picsum.photos/seed/sharpindia/800/450'; this.onerror=null;" />
+                  </div>
+                  <div class="flex flex-col flex-1 px-6 py-5">
+                  <div class="flex justify-between items-center">
+                    <span class="text-gradient-static text-lg text-slate-400 font-medium">Sharp India</span>
+                    <span class="inline-flex items-center gap-1.5 text-[8px] font-semibold px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/40 uppercase">
+                      <i class="fa-solid fa-star text-amber-400/90"></i> Featured
+                    </span>
+                  </div>
+                  <p class="text-sm text-slate-300 mt-3 min-h-0 line-clamp-6">
+                    <!-- Online store interface for Sharp India, featuring consumer electronics and home appliances. -->
+                    SHARP provides innovative technology solutions that enhance productivity across industries. Its reliable and cutting-edge offerings make it a trusted brand in India’s corporate and consumer spaces.
+                  </p>
+                  <span class="text-sky-400 text-xs font-medium mt-4 mt-auto pt-2 inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Visit site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </span>
+                  </div>
+                </a>
+                <!-- Card 5: Technovate -->
+                <a href="https://technovateforindia.com/" target="_blank" rel="noopener"
+                  class="wind-card group flex-shrink-0 bg-slate-900/90 text-slate-100 backdrop-blur-xl px-0 py-0 rounded-2xl border border-sky-500/40 flex flex-col shadow-xl shadow-sky-900/20 hover:border-sky-400/70 hover:shadow-sky-500/30 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+                  <div class="wind-card-image rounded-t-2xl">
+                    <img src="assets/logos/technovate-logo.jpg" alt="Technovate – Times Of India" class="wind-card-img transition-transform duration-300 group-hover:scale-105" loading="lazy" onerror="this.src='https://picsum.photos/seed/technovate/800/450'; this.onerror=null;" />
+                    <img src="assets/logos/toi.webp" alt="Technovate – Times Of India" class="wind-card-img transition-transform duration-300 group-hover:scale-105" loading="lazy" onerror="this.src='https://picsum.photos/seed/technovate/800/450'; this.onerror=null;" />
+                  </div>
+                  <div class="flex flex-col flex-1 px-6 py-5">
+                  <div class="flex justify-between items-center">
+                    <span class="text-gradient-static text-lg text-slate-400 font-medium">Technovate – TOI</span>
+                    <span class="inline-flex items-center gap-1.5 text-[8px] font-semibold px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/40 uppercase">
+                      <i class="fa-solid fa-star text-amber-400/90"></i> Featured
+                    </span>
+                  </div>
+                  <p class="text-sm text-slate-300 mt-3 min-h-0 line-clamp-6">
+                    <!-- Event website for Technovate, an initiative by Times Of India to showcase innovation and technology. -->
+                    A Times of India and Talrop initiative, Technovate for India fosters innovation and tech skills across all 28 states and UTs. The program uses ideathons, expert sessions, and conclaves to equip students for an AI-driven job market.
+                  </p>
+                  <span class="text-sky-400 text-xs font-medium mt-4 mt-auto pt-2 inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Visit site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </span>
+                  </div>
+                </a>
+                <!-- Duplicate set for seamless loop (all 5) -->
+                <a href="https://stagiconic.com/" target="_blank" rel="noopener"
+                  class="wind-card group flex-shrink-0 bg-slate-900/90 text-slate-100 backdrop-blur-xl px-0 py-0 rounded-2xl border border-sky-500/40 flex flex-col shadow-xl shadow-sky-900/20 hover:border-sky-400/70 hover:shadow-sky-500/30 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+                  <div class="wind-card-image rounded-t-2xl">
+                    <img src="assets/logos/stag.webp" alt="Stag Iconic – e-commerce website" class="wind-card-img wind-card-logo-stag transition-transform duration-300 group-hover:scale-105" loading="lazy" onerror="this.src='https://picsum.photos/seed/stagiconic/800/450'; this.onerror=null;" />
+                  </div>
+                  <div class="flex flex-col flex-1 px-6 py-5">
+                  <div class="flex justify-between items-center">
+                    <span class="text-gradient-static text-lg text-slate-400 font-medium">Stag Iconic</span>
+                    <span class="inline-flex items-center gap-1.5 text-[8px] font-semibold px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/40 uppercase">
+                      <i class="fa-solid fa-star text-amber-400/90"></i> Featured
+                    </span>
+                  </div>
+                  <p class="text-sm text-slate-300 mt-3 min-h-0 line-clamp-6">
+                    <!-- E-commerce website for a leading sports equipment brand, showcasing products and enabling seamless online purchases. -->
+                    STAG is a leading Indian sports brand delivering high-performance gear for athletes of all levels. Known for durability and quality, it empowers both professionals and aspiring sports enthusiasts.
+                  </p>
+                  <span class="text-sky-400 text-xs font-medium mt-4 mt-auto pt-2 inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Visit site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </span>
+                  </div>
+                </a>
+                <!-- Card 2: Sharp India -->
+                <a href="https://store.sharpappliances.in/" target="_blank" rel="noopener"
+                  class="wind-card group flex-shrink-0 bg-slate-900/90 text-slate-100 backdrop-blur-xl px-0 py-0 rounded-2xl border border-sky-500/40 flex flex-col shadow-xl shadow-sky-900/20 hover:border-sky-400/70 hover:shadow-sky-500/30 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+                  <div class="wind-card-image rounded-t-2xl">
+                    <img src="assets/logos/sharp.png" alt="Sharp India online store" class="wind-card-img transition-transform duration-300 group-hover:scale-105" loading="lazy" onerror="this.src='https://picsum.photos/seed/sharpindia/800/450'; this.onerror=null;" />
+                  </div>
+                  <div class="flex flex-col flex-1 px-6 py-5">
+                  <div class="flex justify-between items-center">
+                    <span class="text-gradient-static text-lg text-slate-400 font-medium">Sharp India</span>
+                    <span class="inline-flex items-center gap-1.5 text-[8px] font-semibold px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/40 uppercase">
+                      <i class="fa-solid fa-star text-amber-400/90"></i> Featured
+                    </span>
+                  </div>
+                  <p class="text-sm text-slate-300 mt-3 min-h-0 line-clamp-6">
+                    <!-- Online store interface for Sharp India, featuring consumer electronics and home appliances. -->
+                    SHARP provides innovative technology solutions that enhance productivity across industries. Its reliable and cutting-edge offerings make it a trusted brand in India's corporate and consumer spaces.
+                  </p>
+                  <span class="text-sky-400 text-xs font-medium mt-4 mt-auto pt-2 inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Visit site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </span>
+                  </div>
+                </a>
+                <!-- Card 3: Fujifilm -->
+                <a href="https://fujifilmhealthcaresolutions.com/" target="_blank" rel="noopener"
+                  class="wind-card group flex-shrink-0 bg-slate-900/90 text-slate-100 backdrop-blur-xl px-0 py-0 rounded-2xl border border-sky-500/40 flex flex-col shadow-xl shadow-sky-900/20 hover:border-sky-400/70 hover:shadow-sky-500/30 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+                  <div class="wind-card-image rounded-t-2xl">
+                    <img src="assets/logos/fujifilm.svg" alt="Fujifilm Medical India website" class="wind-card-img transition-transform duration-300 group-hover:scale-105" loading="lazy" onerror="this.src='https://picsum.photos/seed/fujifilm/800/450'; this.onerror=null;" />
+                  </div>
+                  <div class="flex flex-col flex-1 px-6 py-5">
+                  <div class="flex justify-between items-center">
+                    <span class="text-gradient-static text-lg text-slate-400 font-medium">Fujifilm Medical India</span>
+                    <span class="inline-flex items-center gap-1.5 text-[8px] font-semibold px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/40 uppercase">
+                      <i class="fa-solid fa-star text-amber-400/90"></i> Featured
+                    </span>
+                  </div>
+                  <p class="text-sm text-slate-300 mt-3 min-h-0 line-clamp-6">
+                    <!-- Medical solutions website for Fujifilm India, presenting products, technologies, and resources. -->
+                    FUJIFILM Healthcare Solutions leverages advanced imaging and diagnostic technologies to improve patient care. The brand drives innovation in healthcare, enabling precise and efficient medical solutions.
+                  </p>
+                  <span class="text-sky-400 text-xs font-medium mt-4 mt-auto pt-2 inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Visit site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </span>
+                  </div>
+                </a>
+                <!-- Card 4: Technovate -->
+                <a href="https://technovateforindia.com/" target="_blank" rel="noopener"
+                  class="wind-card group flex-shrink-0 bg-slate-900/90 text-slate-100 backdrop-blur-xl px-0 py-0 rounded-2xl border border-sky-500/40 flex flex-col shadow-xl shadow-sky-900/20 hover:border-sky-400/70 hover:shadow-sky-500/30 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+                  <div class="wind-card-image rounded-t-2xl">
+                    <img src="assets/logos/technovate-logo.jpg" alt="Technovate – Times Of India" class="wind-card-img transition-transform duration-300 group-hover:scale-105" loading="lazy" onerror="this.src='https://picsum.photos/seed/technovate/800/450'; this.onerror=null;" />
+                    <img src="assets/logos/toi.webp" alt="Technovate – Times Of India" class="wind-card-img transition-transform duration-300 group-hover:scale-105" loading="lazy" onerror="this.src='https://picsum.photos/seed/technovate/800/450'; this.onerror=null;" />
+                  </div>
+                  <div class="flex flex-col flex-1 px-6 py-5">
+                  <div class="flex justify-between items-center">
+                    <span class="text-gradient-static text-lg text-slate-400 font-medium">Technovate – TOI</span>
+                    <span class="inline-flex items-center gap-1.5 text-[8px] font-semibold px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/40 uppercase">
+                      <i class="fa-solid fa-star text-amber-400/90"></i> Featured
+                    </span>
+                  </div>
+                  <p class="text-sm text-slate-300 mt-3 min-h-0 line-clamp-6">
+                    <!-- Event website for Technovate, an initiative by Times Of India to showcase innovation and technology. -->
+                    A Times of India and Talrop initiative, Technovate for India fosters innovation and tech skills across all 28 states and UTs. The program uses ideathons, expert sessions, and conclaves to equip students for an AI-driven job market.
+                  </p>
+                  <span class="text-sky-400 text-xs font-medium mt-4 mt-auto pt-2 inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Visit site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </span>
+                  </div>
+                </a>
+                <!-- Card 5: Future Is She -->
+                <a href="https://timestream.in/future-is-she/" target="_blank" rel="noopener"
+                  class="wind-card group flex-shrink-0 bg-slate-900/90 text-slate-100 backdrop-blur-xl px-0 py-0 rounded-2xl border border-sky-500/40 flex flex-col shadow-xl shadow-sky-900/20 hover:border-sky-400/70 hover:shadow-sky-500/30 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
+                  <div class="wind-card-image rounded-t-2xl">
+                    <img src="assets/logos/timestream.png" alt="Future Is She – Timestream" class="wind-card-img transition-transform duration-300 group-hover:scale-105" loading="lazy" onerror="this.src='https://picsum.photos/seed/futureisshe/800/450'; this.onerror=null;" />
+                    <img src="assets/logos/toi.webp" alt="Times of India" class="wind-card-img transition-transform duration-300 group-hover:scale-105" loading="lazy" onerror="this.src='https://picsum.photos/seed/futureisshe/800/450'; this.onerror=null;" />
+                  </div>
+                  <div class="flex flex-col flex-1 px-6 py-5">
+                  <div class="flex justify-between items-center">
+                    <span class="text-gradient-static text-lg text-slate-400 font-medium">Future Is She</span>
+                    <span class="inline-flex items-center gap-1.5 text-[8px] font-semibold px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-300 border border-sky-500/40 uppercase">
+                      <i class="fa-solid fa-star text-amber-400/90"></i> Featured
+                    </span>
+                  </div>
+                  <p class="text-sm text-slate-300 mt-3 min-h-0 line-clamp-6">
+                    <!-- Campaign microsite celebrating women-led innovation, built for flexible content management. -->
+                    The Future Is SHE – Season 4 is a Times of India initiative celebrating women leaders creating impact across sectors. The series features inspiring online sessions focused on mentorship and empowerment.
+                  </p>
+                  <span class="text-sky-400 text-xs font-medium mt-4 mt-auto pt-2 inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Visit site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer
+        class="border-t bg-slate-950 justify-between md:flex-row flex-col gap-6 border-slate-800 flex py-3 px-4 mt-16 text-slate-300">
+        <div>
+          <a href="mailto:vaishalimahour9@gmail.com">
+            vaishalimahour9@gmail.com
+          </a>
+          <br />
+          <p class="mt-2">© vaishali.codes 2026. All rights reserved.</p>
+        </div>
+        <a class="rounded-full w-fit bg-slate-800 text-slate-200 font-medium px-8 py-3 text-center h-fit border-slate-600 border"
+          href="/contact.html">Contact me</a>
+      </footer>
+      </div>
+    </main>
+    <script src="scripts/wind-slider.js"></script>
+  </body>
+</html>
